@@ -1,0 +1,32 @@
+ [{
+		"firstName"         : "Ren",
+		"lastName"          : "Peres",
+        "birthday"          : "10/12/1989",
+        "age"               : "29",
+        "email"             : "rperes@email.com",
+        "mobileNo"          : "09999239232",
+        "address"           : "Imus, Cavite",
+        "contactPerson"     : "Rui Peres",
+        "contactPersonNo"   : "09323849233"
+  }, {
+        "firstName"         : "Juan",
+        "lastName"          : "Cruz",
+        "birthday"          : "11/21/1989",
+        "age"               : "29",
+        "email"             : "juancruz@email.com",
+        "mobileNo"          : "09333284923",
+        "address"           : "Sampaloc, Manila",
+        "contactPerson"     : "Emma Cruz",
+        "contactPersonNo"   : "09223432322"
+  }, {
+        "firstName"         : "JJ",
+        "lastName"          : "Santos",
+        "birthday"          : "02/22/1989",
+        "age"               : "29",
+        "email"             : "jjs@email.com",
+        "mobileNo"          : "09993248923",
+        "address"           : "Malolos, Bulacan",
+        "contactPerson"     : "Jemma Santos",
+        "contactPersonNo"   : "09067821213"
+  }
+  ]

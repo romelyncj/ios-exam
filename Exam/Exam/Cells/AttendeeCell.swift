@@ -1,0 +1,26 @@
+//
+//  AttendeeCell.swift
+//  Exam
+//
+//  Created by Romelyn C. Jimenez on 12/27/18.
+//  Copyright © 2018 Romelyn C. Jimenez. All rights reserved.
+//
+
+import UIKit
+
+class AttendeeCell: UITableViewCell {
+
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var mobileLabel: UILabel!
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
+    }
+
+}
