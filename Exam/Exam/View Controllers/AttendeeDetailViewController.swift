@@ -1,0 +1,58 @@
+//
+//  AttendeeDetailViewController.swift
+//  Exam
+//
+//  Created by Romelyn C. Jimenez on 12/27/18.
+//  Copyright © 2018 Romelyn C. Jimenez. All rights reserved.
+//
+
+import UIKit
+
+class AttendeeDetailViewController: UITableViewController {
+
+    var attendeeIndex: IndexPath = []
+    @IBOutlet var viewModel: Attendees!
+    
+    var attendeesArray : NSArray!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        viewModel.getAttendees {
+            
+            //re-construct value
+            self.attendeesArray = NSArray(array: [
+                ["value":self.viewModel.attendeeFirstName(for: self.attendeeIndex),"label":"First Name"],
+                ["value":self.viewModel.attendeeLastName(for: self.attendeeIndex),"label":"Last Name"],
+                ["value":self.viewModel.attendeeBirthday(for: self.attendeeIndex),"label":"Birthday"],
+                ["value":self.viewModel.attendeeAge(for: self.attendeeIndex),"label":"Age"],
+                ["value":self.viewModel.attendeeEmail(for: self.attendeeIndex),"label":"Email Address"],
+                ["value":self.viewModel.attendeeMobileNo(for: self.attendeeIndex),"label":"Mobile Number"],
+                ["value":self.viewModel.attendeeContactPerson(for: self.attendeeIndex),"label":"Contact Person"],
+                ["value":self.viewModel.attendeeContactPersonNo(for: self.attendeeIndex),"label":"Contact Number"]])
+            
+            self.tableView.reloadData()
+        }
+    }
+    
+    // MARK: - Table view data source
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return attendeesArray?.count ?? 0
+        
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! AttendeeDetailCell
+        
+        var attendeesDic : NSDictionary!
+        
+        attendeesDic = attendeesArray[indexPath.row] as? NSDictionary
+        
+        cell.value?.text = attendeesDic["value"] as? String
+        cell.label?.text = attendeesDic["label"] as? String
+        return cell
+    }
+
+}

@@ -12,6 +12,8 @@
 		840B603721D4E36E009B47DD /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840B603621D4E36E009B47DD /* APIClient.swift */; };
 		840B603B21D4EAB4009B47DD /* AttendeeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840B603A21D4EAB4009B47DD /* AttendeeTableViewController.swift */; };
 		840B603D21D500F5009B47DD /* AttendeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840B603C21D500F5009B47DD /* AttendeeCell.swift */; };
+		840B603F21D5059D009B47DD /* AttendeeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840B603E21D5059D009B47DD /* AttendeeDetailViewController.swift */; };
+		840B604121D505CA009B47DD /* AttendeeDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840B604021D505CA009B47DD /* AttendeeDetailCell.swift */; };
 		8416850421B9138C00DE2351 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8416850321B9138C00DE2351 /* AppDelegate.swift */; };
 		8416850921B9138C00DE2351 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8416850721B9138C00DE2351 /* Main.storyboard */; };
 		8416850C21B9138C00DE2351 /* Exam.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8416850A21B9138C00DE2351 /* Exam.xcdatamodeld */; };
@@ -44,6 +46,8 @@
 		840B603621D4E36E009B47DD /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		840B603A21D4EAB4009B47DD /* AttendeeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeeTableViewController.swift; sourceTree = "<group>"; };
 		840B603C21D500F5009B47DD /* AttendeeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeeCell.swift; sourceTree = "<group>"; };
+		840B603E21D5059D009B47DD /* AttendeeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeeDetailViewController.swift; sourceTree = "<group>"; };
+		840B604021D505CA009B47DD /* AttendeeDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeeDetailCell.swift; sourceTree = "<group>"; };
 		8416850021B9138C00DE2351 /* Exam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8416850321B9138C00DE2351 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8416850821B9138C00DE2351 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -88,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				840B603A21D4EAB4009B47DD /* AttendeeTableViewController.swift */,
+				840B603E21D5059D009B47DD /* AttendeeDetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -138,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				840B603C21D500F5009B47DD /* AttendeeCell.swift */,
+				840B604021D505CA009B47DD /* AttendeeDetailCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -336,7 +342,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				840B604121D505CA009B47DD /* AttendeeDetailCell.swift in Sources */,
 				8416850C21B9138C00DE2351 /* Exam.xcdatamodeld in Sources */,
+				840B603F21D5059D009B47DD /* AttendeeDetailViewController.swift in Sources */,
 				8416850421B9138C00DE2351 /* AppDelegate.swift in Sources */,
 				840B603B21D4EAB4009B47DD /* AttendeeTableViewController.swift in Sources */,
 				840B603721D4E36E009B47DD /* APIClient.swift in Sources */,

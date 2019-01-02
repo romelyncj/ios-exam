@@ -41,7 +41,25 @@ class Attendees: NSObject {
     }
     
     func attendeeAge(for indexPath: IndexPath) -> String {
-        return attendees?[indexPath.row].value(forKeyPath: "age") as? String ?? ""
+        
+        let dateString = attendees?[indexPath.row].value(forKeyPath: "birthday") as? String ?? ""
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "mm-dd-yyyy" //Your date format
+        dateFormatter.timeZone = TimeZone(abbreviation: "GMT+0:00") //Current time zone
+        //according to date format your date string
+        guard let date = dateFormatter.date(from: dateString) else {
+            return "0"
+        }
+        
+        let now = Date()
+        let birthday: Date = date
+        let calendar = Calendar.current
+        
+        let ageComponents = calendar.dateComponents([.year], from: birthday, to: now)
+        let age = ageComponents.year!
+        
+        return String(age)
     }
     
     func attendeeEmail(for indexPath: IndexPath) -> String {
