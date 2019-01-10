@@ -17,20 +17,7 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="jzE-AR-Ul8">
-                                <rect key="frame" x="177.5" y="333.5" width="20" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="20" id="IhD-yB-8oT"/>
-                                    <constraint firstAttribute="height" constant="20" id="eBX-Yy-ch2"/>
-                                </constraints>
-                            </activityIndicatorView>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="jzE-AR-Ul8" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="EGw-m3-a02"/>
-                            <constraint firstItem="jzE-AR-Ul8" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hBA-mS-zg7"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>

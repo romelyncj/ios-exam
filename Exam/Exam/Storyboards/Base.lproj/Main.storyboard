@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Lfp-qT-bBV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wll-VC-c1d">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,6 +9,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="neb-rz-mVT">
+            <objects>
+                <navigationController id="wll-VC-c1d" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hPg-KJ-uze">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Lfp-qT-bBV" kind="relationship" relationship="rootViewController" id="bOV-LO-MKb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ub7-Cg-5Xn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1756" y="-598"/>
+        </scene>
         <!--Attendee Table View Controller-->
         <scene sceneID="b0L-ik-oTb">
             <objects>
@@ -18,21 +34,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="71" id="gUZ-gu-0YM" customClass="AttendeeCell" customModule="Exam" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" rowHeight="71" id="gUZ-gu-0YM" customClass="AttendeeCell" customModule="Exam" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="71"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gUZ-gu-0YM" id="u1f-8B-2gs">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="70.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="70.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQM-2i-NpD">
-                                            <rect key="frame" x="16" y="16" width="342" height="18"/>
+                                            <rect key="frame" x="16" y="16" width="316" height="18"/>
                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mobile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3vM-c2-KBE">
-                                            <rect key="frame" x="16" y="35" width="342" height="16"/>
+                                            <rect key="frame" x="16" y="35" width="316" height="16"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -60,6 +76,7 @@
                             <outlet property="delegate" destination="Lfp-qT-bBV" id="Vzj-vD-Hr8"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="CJ6-Hw-gwN"/>
                     <connections>
                         <outlet property="viewModel" destination="CWa-hD-nr0" id="QxB-r2-OEF"/>
                     </connections>
@@ -72,7 +89,7 @@
                 </customObject>
                 <customObject id="K8c-Dc-alb" customClass="APIClient" customModule="Exam" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="-650.39999999999998" y="66.11694152923539"/>
+            <point key="canvasLocation" x="-1079" y="-599"/>
         </scene>
         <!--Attendee Detail View Controller-->
         <scene sceneID="wfL-w2-XIW">
@@ -124,6 +141,7 @@
                             <outlet property="delegate" destination="FtT-14-984" id="NY6-oI-Ij8"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="bbt-bl-LG6"/>
                     <connections>
                         <outlet property="viewModel" destination="SKk-cG-qUR" id="eWr-lh-ATT"/>
                     </connections>
@@ -136,7 +154,7 @@
                     </connections>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="1250.4000000000001" y="-97.601199400299862"/>
+            <point key="canvasLocation" x="-215" y="-599"/>
         </scene>
     </scenes>
 </document>

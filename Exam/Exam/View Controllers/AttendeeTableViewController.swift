@@ -15,6 +15,8 @@ class AttendeeTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationItem.title = "Attendees"
+        
         viewModel.getAttendees {
             
             self.tableView.reloadData()
@@ -40,10 +42,10 @@ class AttendeeTableViewController: UITableViewController {
         
         let selectedIndex = tableView.indexPathForSelectedRow
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "AttendeeDetailViewController") as! AttendeeDetailViewController
+        let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc : AttendeeDetailViewController = storyboard.instantiateViewController(withIdentifier: "AttendeeDetailViewController") as! AttendeeDetailViewController
         vc.attendeeIndex = selectedIndex!
-        present(vc, animated: true, completion: nil)
+        
+        self.navigationController?.pushViewController(vc, animated: true)
     }
-
 }
